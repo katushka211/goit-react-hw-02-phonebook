@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import 'yup-phone';
 // import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
+import { ButtonForm } from './ContactForm.styled';
 
 const contactFormSchema = yup.object().shape({
   name: yup
@@ -50,7 +51,7 @@ export const ContactForm = ({ onSave }) => {
           />
           <ErrorMessage name="number" component="div" />
         </label>
-        <button type="submit">Add contact</button>
+        <ButtonForm type="submit">Add contact</ButtonForm>
       </Form>
     </Formik>
   );

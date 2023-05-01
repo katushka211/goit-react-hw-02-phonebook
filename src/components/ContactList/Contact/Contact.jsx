@@ -1,12 +1,16 @@
+import { ButtonForm } from 'components/ContactForm/ContactForm.styled';
+import { Wrapper } from './Contact.styled';
+import { Button } from './Contact.styled';
+
 export const Contact = ({ item: { name, number, id }, onDelete }) => {
   return (
-    <div>
+    <Wrapper>
       <p>
         {name} : {number}
       </p>
-      <button type="button" onClick={() => onDelete(id)}>
+      <Button type="button" onClick={() => onDelete(id)}>
         Delete
-      </button>
-    </div>
+      </Button>
+    </Wrapper>
   );
 };
