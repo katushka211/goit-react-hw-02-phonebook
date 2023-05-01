@@ -1,5 +1,6 @@
 import { Wrapper } from './Contact.styled';
 import { Button } from './Contact.styled';
+import PropTypes from 'prop-types';
 
 export const Contact = ({ item: { name, number, id }, onDelete }) => {
   return (
@@ -12,4 +13,12 @@ export const Contact = ({ item: { name, number, id }, onDelete }) => {
       </Button>
     </Wrapper>
   );
+};
+
+Contact.propTypes = {
+  item: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+  }).isRequired,
 };
