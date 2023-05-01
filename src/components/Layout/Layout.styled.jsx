@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: 0 auto;
-  padding: 0 16px;
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 15px 30px 1px grey;
+  text-align: center;
 `;
