@@ -16,6 +16,8 @@ export const ErrorMessage = styled(FormikErrorMessage)`
 `;
 
 export const ButtonForm = styled.button`
+  width: 380px;
+  margin: 0 auto;
   color: #fff;
   padding: 15px 25px;
   background-color: #38d2d2;
@@ -47,4 +49,9 @@ export const ButtonForm = styled.button`
   touch-action: manipulation;
 
   cursor: pointer;
+  &:hover {
+    box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+      rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+    transform: scale(1.05);
+  }
 `;
