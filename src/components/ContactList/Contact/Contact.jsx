@@ -1,4 +1,3 @@
-import { ButtonForm } from 'components/ContactForm/ContactForm.styled';
 import { Wrapper } from './Contact.styled';
 import { Button } from './Contact.styled';
 
