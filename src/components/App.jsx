@@ -11,14 +11,26 @@ export class App extends Component {
     filter: '',
   };
 
+  // addContact = newContact => {
+  //   this.state.contacts.find(
+  //     contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
+  //   )
+  //     ? alert(`${newContact.name} is already in contacts.`)
+  //     : this.setState(prevState => ({
+  //         contacts: [...prevState.contacts, newContact],
+  //       }));
+  // };
   addContact = newContact => {
-    this.state.contacts.find(
+    const duplicateContact = this.state.contacts.find(
       contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
-    )
-      ? alert(`${newContact.name} is already in contacts.`)
-      : this.setState(prevState => ({
-          contacts: [...prevState.contacts, newContact],
-        }));
+    );
+    if (duplicateContact) {
+      alert(`${duplicateContact.name} is already in contacts.`);
+      console.log(duplicateContact.name);
+      return;
+    }
+    const updatedContacts = [...this.state.contacts, newContact];
+    this.setState({ contacts: updatedContacts });
   };
 
   deleteContact = contactId => {
